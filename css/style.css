@@ -588,12 +588,6 @@ header {
   font-size: 18px;
   line-height: 140%;
 }
-@media screen and (max-width: 960px) {
-  header {
-    margin-top: 20px;
-  }
-}
-
 .active-header {
   background-color: #1a1a1a;
   margin-top: 24px;
@@ -760,7 +754,7 @@ header.active-header .navbar-desktop {
   top: 64%;
   left: 17%;
   width: 70%;
-  height: 1px;
+  height: 2px;
   transition: 0.3s ease;
   background-color: #F20C25;
 }
