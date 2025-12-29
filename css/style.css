@@ -457,6 +457,8 @@ h2 {
 }
 
 h3 {
+  font-weight: 900;
+  text-transform: uppercase;
   color: #fff;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 24px;
@@ -472,7 +474,8 @@ h3 {
 
 h4 {
   color: #fff;
-  font-weight: 400;
+  font-weight: 900;
+  text-transform: uppercase;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 18px;
   line-height: 140%;
@@ -486,6 +489,7 @@ h4 {
 }
 
 h5 {
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   color: #AFAFAF;
@@ -697,7 +701,7 @@ header.active-header .navbar-desktop {
   position: absolute;
   top: 90%;
   left: 16px;
-  transition: 0.5s ease;
+  transition: 0.25s ease-out;
   width: 0%;
   height: 2px;
   background-color: #F20C25;
@@ -799,7 +803,7 @@ header.active-header .navbar-desktop {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   opacity: 0;
   pointer-events: none;
   transform: translate3d(0, -100px, 0);
@@ -833,7 +837,7 @@ header.active-header .navbar-desktop {
   position: absolute;
   top: 90%;
   left: 16px;
-  transition: 0.5s ease;
+  transition: 0.25s ease-out;
   width: 0%;
   height: 2px;
   background-color: #F20C25;
@@ -849,8 +853,7 @@ header.active-header .navbar-desktop {
 }
 
 .cta-link {
-  font-family: "Roboto Consedensed", sans-serif;
-  font-weight: 500;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 .cta span {
@@ -879,23 +882,113 @@ header.active-header .navbar-desktop {
   color: black;
   padding-bottom: 20px;
 }
-
-.hover-underline-animation:after {
+.hover-underline-animation::after {
   content: "";
   position: absolute;
-  width: 40%;
-  transform: scaleX(0);
-  height: 1.5px;
-  bottom: 0;
+  top: 90%;
   left: 0;
+  transition: 0.25s ease-out;
+  width: 0%;
+  height: 2px;
   background-color: #F20C25;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  width: 40%;
 }
 
-.cta:hover .hover-underline-animation:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+footer {
+  background: #000;
+}
+footer h4 {
+  color: #EFEFEF;
+}
+
+#kanji-footer {
+  width: 64px;
+  height: auto;
+}
+
+.footer-icons a {
+  margin-right: 8px;
+}
+
+.footer-text {
+  color: #EFEFEF;
+  margin-top: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  margin-top: 22px;
+}
+.footer-links a {
+  color: #919191;
+  text-decoration: none;
+  font-family: "Be Vietnam Pro", sans-serif;
+  position: relative;
+  display: inline-block;
+}
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  transition: 0.25s ease-out;
+  width: 0%;
+  height: 2px;
+  background-color: #5f5f5f;
+}
+.footer-links a:hover::after {
+  width: 40%;
+}
+
+.footer-title {
+  color: #EFEFEF;
+  margin-bottom: 12px;
+}
+
+.footer-icons {
+  margin-top: 18px;
+}
+
+.container-footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  flex: 1 2 auto;
+}
+
+.container-footer-links {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  gap: 84px;
+}
+@media screen and (max-width: 960px) {
+  .container-footer-links {
+    margin-top: 42px;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.container-footer-aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-aside-text {
+  color: #EFEFEF;
+  font-size: 16px;
+  margin: 0;
 }
 
 * {
@@ -910,25 +1003,6 @@ html {
 
 body {
   width: 100%;
-}
-body::-webkit-scrollbar {
-  padding-right: 4px;
-  width: 20px;
-  background: transparent;
-}
-body::-webkit-scrollbar-track {
-  background: transparent;
-}
-body::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-}
-body ::-moz-selection {
-  background: #F20C25;
-  color: #fff;
-}
-body ::selection {
-  background: #F20C25;
-  color: #fff;
 }
 
 .border {

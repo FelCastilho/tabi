@@ -1,0 +1,112 @@
+@use '../utilities/colors';
+@use '../utilities/layout';
+@use '../utilities/spacing';
+@use '../utilities/typography';
+
+footer {
+  background: #000;
+
+  h4 {
+    color: colors.$white-normal;
+  }
+}
+
+#kanji-footer {
+  width: 64px;
+  height: auto;
+}
+
+.footer-icons a {
+  margin-right: 8px;
+}
+
+.footer-text {
+  color: colors.$white-normal;
+  margin-top: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-top: 22px;
+  }
+
+  a {
+    color: #919191;
+    text-decoration: none;
+    font-family: "Be Vietnam Pro", sans-serif;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 120%;
+      left: 0;
+
+      transition: 0.25s ease-out;
+
+      width: 0%;
+      height: 2px;
+
+      background-color: #5f5f5f;
+    }
+
+    &:hover {
+      &::after {
+        width: 40%;
+      }
+    }
+  }
+
+}
+
+.footer-title {
+  color: colors.$white-normal;
+  margin-bottom: 12px;
+}
+
+.footer-icons {
+  margin-top: 18px;
+}
+
+.container-footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  flex: 1 2 auto;
+}
+
+.container-footer-links {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  gap: 84px;
+
+  @include layout.responsive(s) {
+    margin-top: 42px;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  ;
+}
+
+.container-footer-aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-aside-text {
+  color: colors.$white-normal;
+  font-size: 16px;
+  margin: 0;
+}

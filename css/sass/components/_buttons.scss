@@ -10,8 +10,7 @@
 }
 
 .cta-link {
-  font-family: "Roboto Consedensed", sans-serif;
-  font-weight: 500;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 .cta span {
@@ -39,22 +38,25 @@
   position: relative;
   color: black;
   padding-bottom: 20px;
-}
 
-.hover-underline-animation:after {
-  content: "";
-  position: absolute;
-  width: 40%;
-  transform: scaleX(0);
-  height: 1.5px;
-  bottom: 0;
-  left: 0;
-  background-color: colors.$primary-normal;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
+  &::after {
+    content: "";
 
-.cta:hover .hover-underline-animation:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+    position: absolute;
+    top: 90%;
+    left: 0;
+
+    transition: 0.25s ease-out;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: colors.$primary-normal;
+  }
+
+  &:hover {
+    &::after {
+      width: 40%;
+    }
+  }
 }
